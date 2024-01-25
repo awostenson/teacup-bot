@@ -1,0 +1,342 @@
+{ 
+  "world": {
+    "conflict": [
+      "wartorn",
+      "divided",
+      "prosperous",
+      "peaceful",
+      "insignificant",
+      "historied"
+    ],
+    "geography": {
+      "borders": [
+        "landlocked",
+        "seaside",
+        "mountainous",
+        "forested",
+        "island"
+      ],
+      "climate": [
+        "arid",
+        "wet",
+        "very wet",
+        "frigid",
+        "cold",
+        "temperate",
+        "warm",
+        "dry",
+        "very dry",
+        "tropical"
+      ]
+    },
+    "government": {
+      "descriptor": [
+        "tyrannical",
+        "benevolent",
+        "tax-hungry",
+        "expansionist",
+        "ineffectual",
+        "revolutionary",
+        "conservative",
+        "progressive"
+      ],
+      "type": [
+        "oligarchy",
+        "monarchy",
+        "theocracy",
+        "scholar-meritocracy",
+        "city-state",
+        "empire",
+        "elected council"
+      ]
+    },
+    "technology": {
+      "energySource": [
+        "coal",
+        "woodfire",
+        "steam",
+        "whale oil from faraway seas",
+        "crystals from distant mines",
+        "crystals mined within the region",
+        "electricity",
+        "captured ghosts",
+        "human and animal labor"
+      ],
+      "level": [
+        "lower",
+        "similar",
+        "higher"
+      ]
+    }
+  },
+  "hometown": {
+    "size": [
+      "the middle of nowhere",
+      "a religious settlement",
+      "a small town",
+      "a large town",
+      "a city",
+      "the biggest settlement around"
+    ],
+    "specialty": [
+      "prize agricultural crops",
+      "good hunting",
+      "plentiful trade",
+      "night markets",
+      "hotsprings",
+      "criminal underbelly",
+      "artisan woodworking",
+      "view of the night sky",
+      "innovation in technology",
+      "unique spices",
+      "interactions with the supernatural",
+      "religious sites"
+    ]
+  },
+  "pronouns": {
+    "they": [
+      "she",
+      "he",
+      "they"
+    ],
+    "them": [
+      "her",
+      "him",
+      "them"
+    ],
+    "their": [
+      "her",
+      "his",
+      "their"
+    ],
+    "were": [
+      "was",
+      "was",
+      "were"
+    ]
+  },
+  "family": {
+    "birthOrder": {
+      "1": [
+        "only child"
+      ],
+      "2": [
+        "firstborn of two children",
+        "youngest of two children"
+      ],
+      "3": [
+        "firstborn of three children",
+        "middle child with two siblings",
+        "youngest of three children"
+      ],
+      "4": [
+        "firstborn of four children",
+        "secondborn of four children",
+        "thirdborn of four children",
+        "youngest of four children"
+      ],
+      "5": [
+        "firstborn of many children",
+        "youngest of many children"
+      ]
+    },
+    "prosperity": [
+      "destitute",
+      "poor",
+      "low class",
+      "middle class",
+      "affluent",
+      "nobility"
+    ],
+    "parentalOccupations": [
+      "farmer",
+      "hunter",
+      "artisan",
+      "miner",
+      "weaver",
+      "sailor",
+      "blacksmith",
+      "tailor",
+      "healer",
+      "religious figure",
+      "musician",
+      "teacher",
+      "scholar",
+      "inn owner",
+      "bard",
+      "mason",
+      "explorer",
+      "mercenary",
+      "government official",
+      "artist",
+      "ship captain",
+      "philosopher",
+      "engineer",
+      "diplomat",
+      "monarch"
+    ],
+    "history": [
+      "exiles from another land",
+      "descended from a renowned musician",
+      "descended from a rebel leader",
+      "plagued by a generational curse",
+      "descended from the divine"
+    ]
+  },
+  "backstory": {
+    "origin": {
+      "birth": [
+        "at home",
+        "in an inn",
+        "in undiscosed conditions",
+        "on a ship in transit",
+        "deep in the woods",
+        "in a cave"
+      ],
+      "joinedFamily": [
+        "at birth",
+        "via adoption from a deceased community member",
+        "after being left mysteriously on the doorstep",
+        "after being found the grasp of a hungry creature as a newborn",
+        "after emerging from fully formed from a tree"
+      ]
+    },
+    "childhood": {
+      "standard": [
+        "was arranged to marry a stranger",
+        "was raised to be suspicious of magic",
+        "traveled often and widely",
+        "claimed to have an imaginary friend",
+        "grew up spoiled and indulged at every turn",
+        "made friends with an old adventurer who loved to tell stories",
+        "'s parents died in a freak accident",
+        "'s parents died in a murderous attack",
+        "made friends with a ghost that lived under the floorboards",
+        "inherited an old family curse to never lie"
+      ],
+      "special": [
+        "met an old god in the place where a field met wild lands, and can still hear the song It was humming",
+        "was kidnapped and raised by pirates before eventually returning to land as an adult",
+        "stumbled into a cave of whispering stones in the deep mountains, but could never find it a second time",
+        "claimed to be able to speak with deer",
+        "saw an eye the size of two ships open under the water a day before a tsunami struck"
+      ]
+    },
+    "adventures": [
+      "fought in a grueling war",
+      "tamed a wild creature and kept it as a pet",
+      "chose to get a tattoo of something meaningful",
+      "joined a secret society",
+      "lost the sense of sight",
+      "earned the sentence of exile as punishment for a crime",
+      "became highly eccentric after a brush with something unnameable in the darkness",
+      "acquired a gambling habit",
+      "adopted a child with strange origins",
+      "fell in with a criminal organization",
+      "participated in a fighting ring",
+      "obtained the secret of immortality"
+    ],
+    "item": [
+      "a bow made from the wood of an ancient tree",
+      "a locket that has been in the family for generations",
+      "a sword that sings when it touches blood",
+      "a pocket watch that points somewhere other than north",
+      "a portrait of a woman who, on rare occasions, speaks",
+      "a stuffed boar's head that looks alive in some lights",
+      "the old family grimoire"
+    ]
+  },
+  "character": {
+    "hobby": [
+      "knitting",
+      "training predatory birds",
+      "crafting fishing lures",
+      "storytelling",
+      "computing arithmetic",
+      "weaving",
+      "hunting",
+      "whittling",
+      "painting",
+      "caring for animals",
+      "exploring old ruins",
+      "sailing",
+      "stargazing",
+      "baking",
+      "dancing",
+      "writing",
+      "playing cards",
+      "collecting insects",
+      "tinkering and inventing tools",
+      "composing music"
+    ],
+    "looks": {
+      "regionTypical": [
+        "typical for the region",
+        "typical for the region, with the exception of the hair color",
+        "typical for the region, with the exception of the eye color",
+        "slightly unusual for the region",
+        "highly unusual for the region"
+      ],
+      "hairColor": [
+        "dark brown",
+        "brown",
+        "black",
+        "light brown",
+        "gold",
+        "pale gold",
+        "red",
+        "red-gold"
+      ],
+      "hairType": [
+        "densely curled",
+        "straight",
+        "curly",
+        "wavy"
+      ],
+      "eyeColor": [
+        "dark brown",
+        "light brown",
+        "hazel",
+        "black",
+        "dark blue",
+        "blue-green",
+        "pale blue",
+        "green",
+        "pale green",
+        "albinoid"
+      ],
+      "skinTone": [
+        "very pale",
+        "pale",
+        "tan",
+        "dark",
+        "very dark"
+      ],
+      "build": [
+        "standard",
+        "slight",
+        "well-muscled",
+        "frail",
+        "heavy"
+      ],
+      "height": [
+        "average height",
+        "tall",
+        "short",
+        "uncommonly short",
+        "uncommonly tall"
+      ]
+    },
+    "favColor": [
+      {"name": "gold", "hex": "#B2830B"},
+      {"name": "green", "hex": "#7A874C"},
+      {"name": "red", "hex": "#95301A"},
+      {"name": "orange", "hex": "#B76E1A"},
+      {"name": "blue", "hex": "#3793B0"}
+    ],
+    "fatalFlaw": [
+      ""
+    ],
+    "motivation": []
+  }  
+}

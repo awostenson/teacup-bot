@@ -6,7 +6,7 @@ const Canvas = require('@napi-rs/canvas');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('pigeon')
-		.setDescription('Randomly generates the image of a pigeon!'),
+		.setDescription('Randomly generates an image of a pigeon.'),
 	async execute(interaction) {
 		await interaction.deferReply();
 

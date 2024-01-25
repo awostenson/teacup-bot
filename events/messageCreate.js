@@ -13,11 +13,27 @@ module.exports = {
             }
         });
 
-        const chinTriggerWords = ['chin', 'white chin', 'whitechin'];
+        const chinTriggerWords = ['white chin', 'whitechin'];
 
         chinTriggerWords.forEach((word) => {
-            if (message.content.toLowerCase().includes(word)) {
+            if (message.content.toLowerCase().includes(word) && !Math.floor(Math.random()*4)) {
                 message.react('👑');
+            }
+        });
+
+        const mollyTriggerWords = ['mx problem', 'molly', 'harley'];
+
+        mollyTriggerWords.forEach((word) => {
+            if (message.content.toLowerCase().includes(word)) {
+                message.react('✨');
+            }
+        });
+
+        const ahabTriggerWords = ['teacup', 'ahab', 'area 51'];
+
+        ahabTriggerWords.forEach((word) => {
+            if (message.content.toLowerCase().includes(word)) {
+                message.react('😉');
             }
         });
 
@@ -45,11 +61,17 @@ module.exports = {
             }
         });
 
+        if (message.content.toLowerCase().includes('michael')) {
+            message.reply(
+                { content: 'https://tenor.com/view/michael-btb-michael-gif-13025635' }
+                );
+        }
+
         const explosionTriggerWords = ['uwu', 'owo'];
 
         explosionTriggerWords.forEach((word) => {
             if (message.content.toLowerCase().includes(word)) {
-                message.reply({ content: 'https://tenor.com/view/spraying-disinfect-lilo-and-stitch-lilo-stitch-gif-16694753', ephemeral: true});
+                message.reply({ content: 'https://tenor.com/view/spraying-disinfect-lilo-and-stitch-lilo-stitch-gif-16694753' });
             }
         });
 	},

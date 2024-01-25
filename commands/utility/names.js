@@ -11,13 +11,16 @@ module.exports = {
 	async execute(interaction) {
 		const filePath = "./randomizer_files/names/";
 
-		var prefixes = fs.readFileSync(filePath + 'prefixes.txt').toString().split('\n');
-		var suffixes = fs.readFileSync(filePath + 'suffixes.txt').toString().split('\n');
-		var adjectives = fs.readFileSync(filePath + 'adjectives.txt').toString().split('\n');
-		var virtues = fs.readFileSync(filePath + 'virtues.txt').toString().split('\n');
+		const prefixes = fs.readFileSync(filePath + 'prefixes.txt').toString().split('\n');
+		const suffixes = fs.readFileSync(filePath + 'suffixes.txt').toString().split('\n');
+		const adjectives = fs.readFileSync(filePath + 'adjectives.txt').toString().split('\n');
+		const virtues = fs.readFileSync(filePath + 'virtues.txt').toString().split('\n');
 
 		var output = '';
-		const n = interaction.options.getInteger('number') || 1;
+		var n = interaction.options.getInteger('number') || 1;
+		// cut off names at a certain mark
+		const max = 100;
+		n = (n < max) ? n : max;
 		for (let i = 0; i < n; i++) {
 			newName = generateName();
 			output += newName + ((i == n - 1) ? '' : ', ');
