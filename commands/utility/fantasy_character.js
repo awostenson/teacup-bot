@@ -7,14 +7,18 @@ module.exports = {
 		.setName('fantasy_character')
 		.setDescription('Generates a fantasy character, their backstory, and the world they live in.'),
 	async execute(interaction) {
-        var character = CharacterCreator.createCharacter();
+		try {
+			var character = CharacterCreator.createCharacter();
 
-		var output = '';
-		
-        output += CharacterDisplay.displayWorld(character);
-        output += CharacterDisplay.displayBackstory(character);
-        output += CharacterDisplay.displayCharacter(character);
-        
-		await interaction.reply(output);
+			var output = '';
+			
+			output += CharacterDisplay.displayWorld(character);
+			output += CharacterDisplay.displayBackstory(character);
+			output += CharacterDisplay.displayCharacter(character);
+			
+			await interaction.reply(output);
+		} catch(err) {
+            interaction.reply("Tell Khepri something went wrong.");
+        }
 	},
 };
