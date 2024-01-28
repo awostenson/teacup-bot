@@ -8,6 +8,12 @@ module.exports = {
 		.setName('pigeon')
 		.setDescription('Randomly generates an image of a pigeon.'),
 	async execute(interaction) {
+        console.log(interaction.deferReply);
+        if (!interaction.deferReply) { 
+            interaction.reply("This operation is only supported through slash commands on Discord. " + 
+            "Try again on the home server!");
+            return;
+        }
 		await interaction.deferReply();
 
 		const canvas = Canvas.createCanvas(500, 500);

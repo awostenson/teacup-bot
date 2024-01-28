@@ -58,7 +58,6 @@ Ahead
 Ajar
 Alarmed
 Alarming
-Alcoholic
 Alert
 Alienated
 Alive
@@ -528,8 +527,6 @@ Feeble
 Feigned
 Feisty
 Feline
-Female
-Feminine
 Fertile
 Festive
 Fickle
@@ -945,14 +942,12 @@ Magnificent
 Majestic
 Major
 Makeshift
-Male
 Malicious
 Mammoth
 Maniacal
 Marked
 Married
 Marvelous
-Masculine
 Massive
 Material
 Materialistic
@@ -1069,7 +1064,6 @@ Nutty
 Oafish
 Obedient
 Obeisant
-Obese
 Oblivious
 Oblong
 Obnoxious
@@ -1399,7 +1393,6 @@ Six
 Sizzling
 Skeletal
 Skillful
-Skinny
 Sleepy
 Slight
 Slim

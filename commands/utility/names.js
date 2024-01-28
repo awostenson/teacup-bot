@@ -8,7 +8,7 @@ module.exports = {
 		.addIntegerOption(option =>
 			option.setName('number')
 				.setDescription('How many names to generate')),
-	async execute(interaction) {
+	async execute(interaction, args = false) {
 		const filePath = "./randomizer_files/names/";
 
 		const prefixes = fs.readFileSync(filePath + 'prefixes.txt').toString().split('\n');
@@ -17,7 +17,7 @@ module.exports = {
 		const virtues = fs.readFileSync(filePath + 'virtues.txt').toString().split('\n');
 
 		var output = '';
-		var n = interaction.options.getInteger('number') || 1;
+		var n = args || interaction.options.getInteger('number') || 1;
 		// cut off names at a certain mark
 		const max = 100;
 		n = (n < max) ? n : max;

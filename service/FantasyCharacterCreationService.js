@@ -13,7 +13,7 @@ function createCharacter() {
 } 
 
 function createWorld() {
-  var world = characteristics.world;
+  const world = characteristics.world;
   return {
     "conflict": choose(world.conflict),
     "geography": {
@@ -32,7 +32,7 @@ function createWorld() {
 }
 
 function createHometown() {
-  var town = characteristics.hometown;
+  const town = characteristics.hometown;
   return {
     "size": choose(town.size),
     "specialty": choose(town.specialty)
@@ -40,8 +40,8 @@ function createHometown() {
 }
 
 function createFamily() {
-  var family = characteristics.family;
-  var wealthCoefficient = Math.floor(Math.random() * 100);
+  const family = characteristics.family;
+  const wealthCoefficient = Math.floor(Math.random() * 100);
   return {
     "birthOrder": choose(family.birthOrder[Math.floor((Math.random() * 5) + 1)]),
     "prosperity": setProsperity(wealthCoefficient),
@@ -51,7 +51,7 @@ function createFamily() {
 }
 
 function setProsperity(wealth) {
-  var prosperityLevels = characteristics.family.prosperity;
+  const prosperityLevels = characteristics.family.prosperity;
   if (wealth > 94) {
     return prosperityLevels[prosperityLevels.length - 1];
   } if (wealth > 75) {
@@ -67,14 +67,14 @@ function setProsperity(wealth) {
 }
 
 function setParentalOccupation(wealth) {
-  var occupationLength = characteristics.family.parentalOccupations.length;
-  var baseGen = randomWithDisadvantage(occupationLength - 3);
+  const occupationLength = characteristics.family.parentalOccupations.length;
+  const baseGen = randomWithDisadvantage(occupationLength - 3);
   // a wealth of 100 is locked to the top 66% of jobs, etc
   var silverSpoonBonus = 0;
   if (wealth > 75) {
     silverSpoonBonus = Math.floor((wealth * 0.66 / (100 / occupationLength)));
   }
-  var newGen = baseGen + silverSpoonBonus; 
+  const newGen = baseGen + silverSpoonBonus; 
   if (newGen >= occupationLength) {
     return "wealthy investor";
   }
@@ -94,7 +94,7 @@ function chooseWithDisadvantage(options, nDice = 2) {
 }
 
 function createBackstory() {
-  var backstory = characteristics.backstory;
+  const backstory = characteristics.backstory;
   return {
     "origin": {
       "birth": choose(backstory.origin.birth),
@@ -114,7 +114,7 @@ function setChildhood() {
 }
 
 function createCharacterInfo() {
-  var character = characteristics.character;
+  const character = characteristics.character;
   return {
     "hobby": choose(character.hobby),
     "personality": createPersonality(),
@@ -132,10 +132,10 @@ function createPersonality() {
 }
 
 function createLooks() {
-  var looks = characteristics.character.looks;
+  const looks = characteristics.character.looks;
   // indicates the overall 'variance' in color available to the character:
   // high numbers of dice will tend to skew towards darker pigment
-  var nDice = Math.floor(Math.random() * 3) + 1
+  const nDice = Math.floor(Math.random() * 3) + 1
   return {
     "regionTypical": chooseWithDisadvantage(looks.regionTypical),
     "hairColor": chooseWithDisadvantage(looks.hairColor, nDice),
@@ -150,7 +150,7 @@ function createLooks() {
 function setPronouns() {
   var pronouns = characteristics.pronouns;
   // the subtraction makes binary pronouns more common
-  var roll = Math.floor(Math.abs((Math.random() * pronouns.they.length) - 0.5));
+  const roll = Math.floor(Math.abs((Math.random() * pronouns.they.length) - 0.5));
   return {
     "they": pronouns.they[roll],
     "them": pronouns.them[roll],

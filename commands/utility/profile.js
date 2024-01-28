@@ -5,8 +5,12 @@ const { request } = require('undici');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('profile')
-		.setDescription('Displays user\'s profile.'),
+		.setDescription('Displays a user\'s profile.'),
 	async execute(interaction) {
+		if (!interaction.deferReply) { 
+			interaction.reply("This operation is only supported through slash commands on Discord. " + 
+            "Try again on the home server!");
+            return;        }
 		await interaction.deferReply();
 
 		const canvas = Canvas.createCanvas(1075, 555);
@@ -36,10 +40,11 @@ module.exports = {
 		context.fillRect(bufferWidth, bufferWidth, canvas.width - 2*bufferWidth, canvas.height - 2*bufferWidth);
 
 		// TEXT
-		// TODO: determine why this isn't appearing
 		context.font = '35px Trebuchet MS, sans-serif';
 		context.fillStyle = '#000';
-		const displayNameCut = interaction.member.displayName.substring(0, interaction.member.displayName.indexOf(' '));
+		const displayNameCut = interaction.member.displayName.includes(' ') ?
+			interaction.member.displayName.substring(0, interaction.member.displayName.indexOf(' ')) :
+			interaction.member.displayName;
 		context.fillText('USER:   ' + displayNameCut, 7*bufferWidth + 2*iconRadius, 3.5*bufferWidth);
 
 		// ICON

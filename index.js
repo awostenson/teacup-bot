@@ -3,6 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const { token } = require('./config.json');
+const Sequelize = require('sequelize');
 
 // Create a new client instance
 const client = new Client({ 
@@ -11,7 +12,16 @@ const client = new Client({
 		GatewayIntentBits.GuildMessages, 
 		GatewayIntentBits.Guilds,
 		GatewayIntentBits.MessageContent,
-	] });
+	] 
+});
+
+const sequelize = new Sequelize('database', 'user', 'password', {
+	host: 'localhost',
+	dialect: 'sqlite',
+	logging: false,
+	// SQLite only
+	storage: 'database.sqlite',
+});
 
 client.commands = new Collection();
 
@@ -45,5 +55,25 @@ for (const file of eventFiles) {
 		client.on(event.name, (...args) => event.execute(...args));
 	}
 }
+
+// allowing for commands via '!' (so this bot can be used
+// by people on our linked guilded server) 
+client.on('messageCreate', async message => {
+	const prefix = '!';
+	if (message.content.startsWith(prefix)) {
+		const args = message.content.slice(prefix.length).trim().split(/ +/);
+		const cmd = args.shift().toLowerCase();
+		const command = client.commands.get(cmd);
+
+		if (!command) return;
+		
+		try {
+			command.execute(message, args);
+		} catch (error) {
+			console.error(error);
+			message.reply(`Couldn't run command`);
+		}
+	}
+})
 
 client.login(token);

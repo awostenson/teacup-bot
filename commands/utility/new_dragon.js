@@ -6,6 +6,10 @@ module.exports = {
 		.setName('new_dragon')
 		.setDescription('Not yet functional!'),
 	async execute(interaction) {
+		if (!interaction.deferReply) { 
+			interaction.reply("This operation is only supported through slash commands on Discord. " + 
+            "Try again on the home server!");
+            return;        }
 		await interaction.deferReply();
 
 		const canvas = Canvas.createCanvas(500, 500);
