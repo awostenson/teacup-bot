@@ -59,7 +59,7 @@ for (const file of eventFiles) {
 // allowing for commands via '!' (so this bot can be used
 // by people on our linked guilded server) 
 client.on('messageCreate', async message => {
-	const prefix = '!';
+	const prefix = 'p!';
 	if (message.content.startsWith(prefix)) {
 		const args = message.content.slice(prefix.length).trim().split(/ +/);
 		const cmd = args.shift().toLowerCase();

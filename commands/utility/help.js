@@ -22,7 +22,7 @@ module.exports = {
             '> - `/typo` -- Quickdraw on the \'typo in the group chat\' meme. Get Khep\'s ass!\n\n' +
 
             '```If you\'re trying to use the bot through Guilded and you\'re having trouble, ' +
-            'simply replace the \'/\' in the command with a \'!\'. If that doesn\'t work, you know who to yell at.```'
+            'simply replace the \'/\' in the command with a \'p!\'. If that doesn\'t work, you know who to yell at.```'
             );
 	},
 };
