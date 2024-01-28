@@ -4,7 +4,7 @@ const { SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('fantasy_character')
+		.setName('fantasy')
 		.setDescription('Generates a fantasy character, their backstory, and the world they live in.'),
 	async execute(interaction) {
 		try {

@@ -10,7 +10,7 @@ module.exports = {
             var output = 
                 '[ + ] ' + generateThree() + '\n' +
                 '[ = ] ' + generateThree() + '\n' + 
-                '[ - ] ' + generateThree();
+                '[ – ] ' + generateThree();
             
             await interaction.reply(output);
 

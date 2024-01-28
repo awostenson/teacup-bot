@@ -10,7 +10,7 @@ function displayWorld(character) {
 function displayRegion(character) {
   var world = character.world;
   return [
-    "**Setting**:\n> This story takes place in a " + world.geography.borders +
+    "**Setting**\n> This story takes place in a " + world.geography.borders +
     " region characterized by its " + world.geography.climate +
     " climate. It is a " + world.conflict + 
       " land overseen by a " + world.government.descriptor + 
@@ -31,7 +31,7 @@ function displayHometown(character) {
 function displayCharacter(character) {
   var looks = character.character.looks;
   return [
-    "**Character**:\n> Our central character might be described as " + character.character.personality +
+    "**Character**\n> Our central character might be described as " + character.character.personality +
     ". " + _.capitalize(character.pronouns.they) + " spent much of " + character.pronouns.their +
     " free time " + character.character.hobby + " prior to the story beginning. " +
     _.capitalize(character.pronouns.their) + " favorite color is " + character.character.favColor.name + ".\n> \n> " +
@@ -47,11 +47,11 @@ function displayCharacter(character) {
 function displayBackstory(character) {
   var pronouns = character.pronouns;
   return [
-    "**Backstory**:\n> The character was born " + character.backstory.origin.birth +
+    "**Backstory**\n> The character was born " + character.backstory.origin.birth +
     ", and joined " + pronouns.their + " family " + character.backstory.origin.joinedFamily +
      ". " + _.capitalize(pronouns.they) +
     " " + pronouns.were + " " + pronouns.their + " parents' " + character.family.birthOrder + ". " +
-    _.capitalize(pronouns.their) + " family was " + character.family.prosperity + ", with the more influential of " + pronouns.their + " parents working as a " +
+    _.capitalize(pronouns.their) + " family was " + character.family.prosperity + ", with the more influential of " + pronouns.their + " parents working as " +
     character.family.parentalOccupation + ". The character grew up hearing stories of how " +
     pronouns.their + " family was " + character.family.history + ".\n> \n> In " + pronouns.their + " childhood, the character " +
     character.backstory.childhood + ". Later in life, after some growth, " + pronouns.they + 

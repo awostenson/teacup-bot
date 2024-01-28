@@ -14,7 +14,7 @@ module.exports = {
             '> - `/pigeon` -- Generates a random pigeon! Art by TJ. *(This option is currently Discord-only.)*\n' +
             '> - `/personality` -- Generates a nine-trait personality summary for a character.\n' +
             '> - `/names` -- Generates Crestlands-compliant names, as many as you specify.\n' +
-            '> - `/fantasy_character` -- Generates a fantasy character, including world and backstory prompts.\n' +
+            '> - `/fantasy` -- Generates a fantasy character, including world and backstory prompts.\n' +
             
             '\n**For fun:**\n' +
             '> - `/profile` -- A profile card! Special for you! *(This option is currently Discord-only.)*\n' +
