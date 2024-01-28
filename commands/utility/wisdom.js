@@ -39,6 +39,7 @@ module.exports = {
             
             await interaction.reply(output);
         } catch(err) {
+            console.log(err);
             interaction.reply("Tell Khepri something went wrong.");
         }
 	},

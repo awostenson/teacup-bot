@@ -70,6 +70,7 @@ module.exports = {
 
 			interaction.editReply({ files: [attachment] });
 		} catch(err) {
+			console.log(err);
             interaction.reply("Tell Khepri something went wrong.");
         }
 	},

@@ -22,6 +22,7 @@ module.exports = {
                 return personalityTraits.traits[Math.floor(Math.random()*personalityTraits.traits.length)];
             }
         } catch(err) {
+            console.log(err);
             interaction.reply("Tell Khepri something went wrong.");
         }
 	},

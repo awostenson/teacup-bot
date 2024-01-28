@@ -18,7 +18,8 @@ module.exports = {
 
 		try {
 			var output = '';
-			var n = args || interaction.options.getInteger('number') || 1;
+			if (!args[0]) { args = 0 }
+			var n = args || interaction.options?.getInteger('number') || 1;
 			// cut off names at a certain mark
 			const max = 100;
 			n = (n < max) ? n : max;
@@ -28,6 +29,7 @@ module.exports = {
 			}
 			await interaction.reply(output);
 		} catch(err) {
+			console.log(err);
 			interaction.reply("Tell Khepri something went wrong.");
 		}
 

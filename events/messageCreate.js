@@ -3,7 +3,7 @@ const { Events } = require('discord.js');
 module.exports = {
 	name: Events.MessageCreate,
 	async execute(message) {
-        const shrikeTriggerWords = ['shrike', 'whistle', 'whistlefox', 'piper'];
+        const shrikeTriggerWords = ['shrike', 'whistlefox', 'piper'];
 
         shrikeTriggerWords.forEach((word) => {
             if (message.content.toLowerCase().includes(word)) {
@@ -59,7 +59,7 @@ module.exports = {
             }
         });
 
-        if (message.content.toLowerCase().includes('michael')) {
+        if (!message.author.bot && message.content.toLowerCase().includes('michael')) {
             message.reply(
                 { content: 'https://tenor.com/view/michael-btb-michael-gif-13025635' }
                 );
