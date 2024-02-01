@@ -3,7 +3,7 @@ const { Events } = require('discord.js');
 module.exports = {
 	name: Events.MessageCreate,
 	async execute(message) {
-        const shrikeTriggerWords = ['shrike', 'whistlefox', 'piper'];
+        const shrikeTriggerWords = ['shrike ', 'whistlefox', 'piper'];
 
         shrikeTriggerWords.forEach((word) => {
             if (message.content.toLowerCase().includes(word)) {
@@ -65,7 +65,7 @@ module.exports = {
                 );
         }
 
-        const explosionTriggerWords = ['uwu', 'owo'];
+        const explosionTriggerWords = ['uwu', 'owo', ':3', 'nyah', '>.<'];
 
         explosionTriggerWords.forEach((word) => {
             if (message.content.toLowerCase().includes(word)) {

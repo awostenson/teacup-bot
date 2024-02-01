@@ -44,7 +44,8 @@ Bliss
 Blithe
 Blythe
 Bond
-{BraveBravery}
+Brave
+Bravery
 Brazen
 Breezy
 Bright
