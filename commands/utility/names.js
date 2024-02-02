@@ -22,12 +22,18 @@ module.exports = {
 			var n = args || interaction.options?.getInteger('number') || 1;
 			// cut off names at a certain mark
 			const max = 100;
+			// add a message when the user is asking for more than the limit
+			if (n > 100) {
+				output += 'Hello, user ' + interaction.author.username + 
+					'. Yes, you. I\'m not going to generate you ' + n + 
+					' names. That would be absurd. Have a flat hundred, you greedy loathsome creature.\n\n';
+			}
 			n = (n < max) ? n : max;
 			for (let i = 0; i < n; i++) {
 				newName = generateName();
 				output += newName + ((i == n - 1) ? '' : ', ');
 			}
-			await interaction.reply(output);
+						await interaction.reply(output);
 		} catch(err) {
 			console.log(err);
 			interaction.reply("Tell Khepri something went wrong.");
