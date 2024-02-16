@@ -64,7 +64,7 @@ module.exports = {
         const stonksTriggerWords = ['stonks'];
 
         stonksTriggerWords.forEach((word) => {
-            if (message.content.toLowerCase().includes(word)) {
+            if (message.content.toLowerCase().split(" ").includes(word)) {
                 message.react('🔥');
                 message.react('📈');
                 message.react('😤');
@@ -72,7 +72,7 @@ module.exports = {
             }
         });
 
-        if (!message.author.bot && message.content.toLowerCase().includes('michael')) {
+        if (!message.author.bot && message.content.toLowerCase().split(" ").includes('michael')) {
             message.reply(
                 { content: 'https://tenor.com/view/michael-btb-michael-gif-13025635' }
                 );
@@ -81,7 +81,7 @@ module.exports = {
         const explosionTriggerWords = ['uwu', 'owo', ':3', 'nyah', '>.<'];
 
         explosionTriggerWords.forEach((word) => {
-            if (message.content.toLowerCase().includes(word)) {
+            if (message.content.toLowerCase().split(" ").includes(word)) {
                 message.reply({ content: 'https://tenor.com/view/spraying-disinfect-lilo-and-stitch-lilo-stitch-gif-16694753' });
             }
         });
