@@ -10,7 +10,7 @@ module.exports = {
                 'whitechin'
             ],
             '🎵': [
-                ' shrike', 
+                'shrike', 
                 'whistlefox', 
                 'piper'
             ],
@@ -50,7 +50,12 @@ module.exports = {
 
         for (emoji in triggerWords) {
             for (i in triggerWords[emoji]) {
-                if (message.content.toLowerCase().includes(triggerWords[emoji][i])) {
+                if (
+                    message.content
+                    .toLowerCase().split(" ")
+                    .includes(triggerWords[emoji][i])
+                    ) {
+
                     message.react(emoji);
                 }
             }
